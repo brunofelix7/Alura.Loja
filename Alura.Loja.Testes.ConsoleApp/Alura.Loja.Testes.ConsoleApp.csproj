@@ -146,6 +146,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAOTest\ProdutoDAOTest.cs" />
+    <Compile Include="EFCore\LojaContext.cs" />
     <Compile Include="Model\Produto.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="Program.cs" />

@@ -1,40 +1,19 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
+﻿using Alura.Loja.Testes.ConsoleApp.EFCore;
 
 namespace Alura.Loja.Testes.ConsoleApp {
 
-    class Program {
+    public class Program {
 
-        static void Main(string[] args) {
+        private static void Main(string[] args) {
             //  Call methods
+            SaveEFC();
         }
 
-        private static void Add() {
-            var produto = new Produto(0, "Harry Potter e a Ordem da Fênix", "Livros", 19.89);
-            var produtoDAO = new ProdutoDAO();
-            produtoDAO.Save(produto);
-        }
-
-        private static void Update() {
-            var produto = new Produto(1, "Harry Potter e a Ordem da Fênix", "Livros", 29.90);
-            var produtoDAO = new ProdutoDAO();
-            produtoDAO.Update(produto);
-        }
-
-        private static void Remove() {
-            var produto = new Produto(1, "Harry Potter e a Ordem da Fênix", "Livros", 29.90);
-            var produtoDAO = new ProdutoDAO();
-            produtoDAO.Remove(produto);
-        }
-
-        private static void List() {
-            var produtoDAO = new ProdutoDAO();
-            List<Produto> produtos = produtoDAO.FindAll();
-            foreach(Produto produto in produtos) {
-                Debug.WriteLine(produto.Nome);
-                Debug.WriteLine(produto.Categoria);
-                Debug.WriteLine(produto.Preco);
-            }
+        private static void SaveEFC() {
+            var context = new LojaContext();
+            context.Produtos.Add(new Produto(0, "Linkin Park - One More Light", "CDs e DVDs", 39.90));
+            //  context.Produtos.AddRange(p1, p2, p3);
+            context.SaveChanges();
         }
     }
 }
