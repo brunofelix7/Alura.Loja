@@ -23,8 +23,10 @@ namespace Alura.Loja.Testes.ConsoleApp.EFCore {
         public int Save(Produto produto) {
             int rowsAffected = 0;
             try {
+                EFCoreUtil.ShowSQL(context);
                 context.Produtos.Add(produto);
                 rowsAffected = context.SaveChanges();
+                EFCoreUtil.ShowEntityState(context);
                 return rowsAffected;
             } catch (Exception e) {
                 Debug.WriteLine("Save error - " + e.Message);
@@ -36,8 +38,10 @@ namespace Alura.Loja.Testes.ConsoleApp.EFCore {
         public int Update(Produto produto) {
             int rowsAffected = 0;
             try {
+                EFCoreUtil.ShowSQL(context);
                 context.Produtos.Update(produto);
                 rowsAffected = context.SaveChanges();
+                EFCoreUtil.ShowEntityState(context);
                 return rowsAffected;
             } catch(Exception e) {
                 Debug.WriteLine("Update error - " + e.Message);
@@ -49,8 +53,10 @@ namespace Alura.Loja.Testes.ConsoleApp.EFCore {
         public int Delete(Produto produto) {
             int rowsAffected = 0;
             try {
+                EFCoreUtil.ShowSQL(context);
                 context.Produtos.Remove(produto);
                 rowsAffected = context.SaveChanges();
+                EFCoreUtil.ShowEntityState(context);
                 return rowsAffected;
             } catch (Exception e) {
                 Debug.WriteLine("Delete error - " + e.Message);
@@ -61,7 +67,9 @@ namespace Alura.Loja.Testes.ConsoleApp.EFCore {
         /* Busca um produto */
         public Produto FindOne(int id) {
             try {
+                EFCoreUtil.ShowSQL(context);
                 Produto produto = context.Produtos.Find(id);
+                EFCoreUtil.ShowEntityState(context);
                 return produto;
             } catch (Exception e) {
                 Debug.WriteLine("FindOne error - " + e.Message);
@@ -72,7 +80,9 @@ namespace Alura.Loja.Testes.ConsoleApp.EFCore {
         /* Busca todos os produtos */
         public List<Produto> FindAll() {
             try {
+                EFCoreUtil.ShowSQL(context);
                 List<Produto> produtos = context.Produtos.ToList();
+                EFCoreUtil.ShowEntityState(context);
                 return produtos;
             } catch (Exception e) {
                 Debug.WriteLine("FindAll error - " + e.Message);

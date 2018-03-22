@@ -25,7 +25,7 @@ namespace Alura.Loja.Testes.ConsoleApp.EFCoreTest {
 
         [TestMethod]
         public void DeleteTest() {
-            Produto produto = produtoDAO.FindOne(2007);
+            Produto produto = produtoDAO.FindOne(1);
             int rowsAffected = produtoDAO.Delete(produto);
             Assert.AreNotEqual(0, rowsAffected);
         }

@@ -160,6 +160,8 @@
   <ItemGroup>
     <Compile Include="DAOTest\ProdutoDAOTest.cs" />
     <Compile Include="EFCoreTest\ProdutoDAOEFTest.cs" />
+    <Compile Include="EFCore\SqlLoggerProvider.cs" />
+    <Compile Include="EFCore\EFCoreUtil.cs" />
     <Compile Include="EFCore\IProdutoDAOEF.cs" />
     <Compile Include="EFCore\LojaContext.cs" />
     <Compile Include="EFCore\ProdutoDAOEF.cs" />

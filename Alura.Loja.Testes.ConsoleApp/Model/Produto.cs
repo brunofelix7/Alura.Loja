@@ -17,5 +17,9 @@
             this.Categoria = Categoria;
             this.Preco = Preco;
         }
+
+        public override string ToString() {
+            return $"Produto: Id: {this.Id} | Nome: {this.Nome} | Categoria: {this.Categoria} | Preco: {this.Preco}";
+        }
     }
 }
