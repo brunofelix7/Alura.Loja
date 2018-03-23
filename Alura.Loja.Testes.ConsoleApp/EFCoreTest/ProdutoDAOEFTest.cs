@@ -18,7 +18,7 @@ namespace Alura.Loja.Testes.ConsoleApp.EFCoreTest {
         [TestMethod]
         public void UpdateTest() {
             Produto produto = produtoDAO.FindOne(1);
-            produto.Nome = "Ok";
+            produto.Unidade = 3;
             int rowsAffected = produtoDAO.Update(produto);
             Assert.AreNotEqual(0, rowsAffected);
         }

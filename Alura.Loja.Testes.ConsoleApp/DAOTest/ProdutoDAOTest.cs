@@ -32,7 +32,7 @@ namespace Alura.Loja.Testes.ConsoleApp.DAOTest {
             foreach (Produto produto in produtos) {
                 Debug.WriteLine(produto.Nome);
                 Debug.WriteLine(produto.Categoria);
-                Debug.WriteLine(produto.Preco);
+                Debug.WriteLine(produto.PrecoUnidade);
             }
         }
     }

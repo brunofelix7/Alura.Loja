@@ -10,7 +10,7 @@ namespace Alura.Loja.Testes.ConsoleApp.EFCore {
 
         //  Para configurar o MySQL
         public LojaContext(DbContextOptions<LojaContext> options) : base(options) {
-            
+
         }
 
         //  Realiza a conexão com o banco de dados
@@ -23,5 +23,9 @@ namespace Alura.Loja.Testes.ConsoleApp.EFCore {
         //  Classes que serão persistidas pelo Entity Framework. Tem que ser sempre o nome da tabela
         internal DbSet<Produto> Produtos { get; set; }
 
+        //  No momento da criacao do meu modelo adiciona configuracoes
+        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

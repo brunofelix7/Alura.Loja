@@ -5,21 +5,22 @@
         public int Id { get; internal set; }
         public string Nome { get; internal set; }
         public string Categoria { get; internal set; }
-        public double Preco { get; internal set; }
+        public double PrecoUnidade { get; internal set; }
+        public int Unidade { get; internal set; }
 
         public Produto() {
 
         }
 
-        public Produto(int Id, string Nome, string Categoria, double Preco) {
+        public Produto(int Id, string Nome, string Categoria, double PrecoUnidade) {
             this.Id = Id;
             this.Nome = Nome;
             this.Categoria = Categoria;
-            this.Preco = Preco;
+            this.PrecoUnidade = PrecoUnidade;
         }
 
         public override string ToString() {
-            return $"Produto: Id: {this.Id} | Nome: {this.Nome} | Categoria: {this.Categoria} | Preco: {this.Preco}";
+            return $"Produto: Id: {this.Id} | Nome: {this.Nome} | Categoria: {this.Categoria} | Preco: {this.PrecoUnidade}";
         }
     }
 }

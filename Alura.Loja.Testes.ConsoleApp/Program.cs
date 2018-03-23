@@ -1,5 +1,4 @@
 ﻿using Alura.Loja.Testes.ConsoleApp.EFCore;
-using System.Collections.Generic;
 
 namespace Alura.Loja.Testes.ConsoleApp {
 
