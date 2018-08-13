@@ -1,6 +1,6 @@
-﻿using Alura.Loja.DAO.Interface;
-using Alura.Loja.Database.DataContext;
-using Alura.Loja.Model;
+﻿using Alura.Loja.Database.DataContext;
+using Alura.Loja.Database.Interface;
+using Alura.Loja.Model.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

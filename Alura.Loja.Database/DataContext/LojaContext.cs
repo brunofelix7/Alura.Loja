@@ -1,4 +1,4 @@
-﻿using Alura.Loja.Model;
+﻿using Alura.Loja.Model.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -15,6 +15,7 @@ namespace Alura.Loja.Database.DataContext {
         //  Classes que serão persistidas pelo Entity Framework. Tem que ser sempre o nome da tabela
         internal DbSet<Produto> Produtos { get; set; }
         internal DbSet<Compra> Compras { get; set; }
+        internal DbSet<Promocao> Promocoes { get; set; }
 
         public LojaContext() {
 
@@ -34,6 +35,8 @@ namespace Alura.Loja.Database.DataContext {
 
         //  No momento da criacao do meu modelo adiciona configuracoes
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            //  Cria uma chave primária composta
+            modelBuilder.Entity<PromocaoProduto>().HasKey(pp => new { pp.PromocaoId, pp.ProdutoId });
             base.OnModelCreating(modelBuilder);
         }
 

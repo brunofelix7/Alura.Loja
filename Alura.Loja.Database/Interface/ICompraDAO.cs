@@ -1,7 +1,7 @@
-﻿using Alura.Loja.Model;
+﻿using Alura.Loja.Model.Model;
 using System.Collections.Generic;
 
-namespace Alura.Loja.DAO.Interface {
+namespace Alura.Loja.Database.Interface {
 
     interface ICompraDAO {
 

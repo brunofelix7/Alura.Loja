@@ -1,5 +1,5 @@
 ﻿using Alura.Loja.App.ADO;
-using Alura.Loja.Model;
+using Alura.Loja.Model.Model;
 using System.Collections.Generic;
 using System.Diagnostics;
 

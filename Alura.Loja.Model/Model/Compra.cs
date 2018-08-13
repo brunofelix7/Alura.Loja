@@ -1,4 +1,4 @@
-﻿namespace Alura.Loja.Model {
+﻿namespace Alura.Loja.Model.Model {
 
     public class Compra {
 

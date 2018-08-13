@@ -1,4 +1,6 @@
-﻿namespace Alura.Loja.Model {
+﻿using System.Collections.Generic;
+
+namespace Alura.Loja.Model.Model {
 
     public class Produto {
 
@@ -7,6 +9,7 @@
         public string Categoria { get; set; }
         public double PrecoUnidade { get; set; }
         public string Unidade { get; set; }
+        public IList<PromocaoProduto> Promocoes { get; set; }
 
         public Produto() {
 

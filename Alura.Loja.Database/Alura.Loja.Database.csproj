@@ -7,8 +7,8 @@
     <ProjectGuid>{3808E0AA-1E2B-4CD3-B039-D455C7D8B66A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Alura.Loja.DAO</RootNamespace>
-    <AssemblyName>Alura.Loja.DAO</AssemblyName>
+    <RootNamespace>Alura.Loja.Database</RootNamespace>
+    <AssemblyName>Alura.Loja.Database</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -173,10 +173,12 @@
   <ItemGroup>
     <Compile Include="DAO\CompraDAO.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
+    <Compile Include="DAO\PromocaoDAO.cs" />
     <Compile Include="DataContext\LojaContext.cs" />
     <Compile Include="DataContext\SqlLoggerProvider.cs" />
     <Compile Include="Interface\ICompraDAO.cs" />
     <Compile Include="Interface\IProdutoDAO.cs" />
+    <Compile Include="Interface\IPromocaoDAO.cs" />
     <Compile Include="Mappings\CompraMap.cs" />
     <Compile Include="Mappings\ProdutoMap.cs" />
     <Compile Include="Migrations\20180322195645_Version 1.0.cs" />
@@ -198,6 +200,10 @@
     <Compile Include="Migrations\20180323131753_Version 5.0.cs" />
     <Compile Include="Migrations\20180323131753_Version 5.0.Designer.cs">
       <DependentUpon>20180323131753_Version 5.0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180406125310_Version 6.0.cs" />
+    <Compile Include="Migrations\20180406125310_Version 6.0.designer.cs">
+      <DependentUpon>20180406125310_Version 6.0.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\LojaContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

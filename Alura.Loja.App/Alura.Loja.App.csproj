@@ -197,7 +197,7 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Alura.Loja.DAO\Alura.Loja.Database.csproj">
+    <ProjectReference Include="..\Alura.Loja.Database\Alura.Loja.Database.csproj">
       <Project>{3808e0aa-1e2b-4cd3-b039-d455c7d8b66a}</Project>
       <Name>Alura.Loja.Database</Name>
     </ProjectReference>

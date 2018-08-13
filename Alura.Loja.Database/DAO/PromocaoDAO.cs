@@ -1,6 +1,6 @@
-﻿using Alura.Loja.DAO.Interface;
-using Alura.Loja.Database.DataContext;
-using Alura.Loja.Model;
+﻿using Alura.Loja.Database.DataContext;
+using Alura.Loja.Database.Interface;
+using Alura.Loja.Model.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,12 +8,12 @@ using System.Linq;
 
 namespace Alura.Loja.Database.DAO {
 
-    public class ProdutoDAO : IProdutoDAO, IDisposable {
+    public class PromocaoDAO : IPromocaoDAO, IDisposable{
 
         private LojaContext context;
 
         /* Cria o contexto */
-        public ProdutoDAO() {
+        public PromocaoDAO() {
             this.context = new LojaContext();
         }
 
@@ -22,12 +22,12 @@ namespace Alura.Loja.Database.DAO {
             context.Dispose();
         }
 
-        /* Salva um produto */
-        public int Save(Produto produto) {
+        /* Salva uma promocao */
+        public int Save(Promocao promocao) {
             int rowsAffected = 0;
             try {
                 context.ShowSQL(context);
-                context.Produtos.Add(produto);
+                context.Promocoes.Add(promocao);
                 rowsAffected = context.SaveChanges();
                 context.ShowEntityState(context);
                 return rowsAffected;
@@ -37,12 +37,12 @@ namespace Alura.Loja.Database.DAO {
             }
         }
 
-        /* Atualiza um produto */
-        public int Update(Produto produto) {
+        /* Atualiza uma promocao */
+        public int Update(Promocao promocao) {
             int rowsAffected = 0;
             try {
                 context.ShowSQL(context);
-                context.Produtos.Update(produto);
+                context.Promocoes.Update(promocao);
                 rowsAffected = context.SaveChanges();
                 context.ShowEntityState(context);
                 return rowsAffected;
@@ -52,12 +52,12 @@ namespace Alura.Loja.Database.DAO {
             }
         }
 
-        /* Exclui um produto */
-        public int Delete(Produto produto) {
+        /* Exclui uma promocao */
+        public int Delete(Promocao promocao) {
             int rowsAffected = 0;
             try {
                 context.ShowSQL(context);
-                context.Produtos.Remove(produto);
+                context.Promocoes.Remove(promocao);
                 rowsAffected = context.SaveChanges();
                 context.ShowEntityState(context);
                 return rowsAffected;
@@ -67,26 +67,26 @@ namespace Alura.Loja.Database.DAO {
             }
         }
 
-        /* Busca um produto */
-        public Produto FindOne(int id) {
+        /* Busca uma promocao */
+        public Promocao FindOne(int id) {
             try {
                 context.ShowSQL(context);
-                Produto produto = context.Produtos.Find(id);
+                Promocao promocao = context.Promocoes.Find(id);
                 context.ShowEntityState(context);
-                return produto;
+                return promocao;
             } catch (Exception e) {
                 Debug.WriteLine("FindOne error - " + e.Message);
                 return null;
             }
         }
 
-        /* Busca todos os produtos */
-        public List<Produto> FindAll() {
+        /* Busca todas as promocoes */
+        public List<Promocao> FindAll() {
             try {
                 context.ShowSQL(context);
-                List<Produto> produtos = context.Produtos.ToList();
+                List<Promocao> promocoes = context.Promocoes.ToList();
                 context.ShowEntityState(context);
-                return produtos;
+                return promocoes;
             } catch (Exception e) {
                 Debug.WriteLine("FindAll error - " + e.Message);
                 return null;

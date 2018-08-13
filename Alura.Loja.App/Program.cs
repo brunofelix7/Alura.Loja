@@ -1,5 +1,5 @@
 ﻿using Alura.Loja.Database.DAO;
-using Alura.Loja.Model;
+using Alura.Loja.Model.Model;
 
 namespace Alura.Loja.App {
 

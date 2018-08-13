@@ -1,5 +1,5 @@
 ﻿using Alura.Loja.Database.DAO;
-using Alura.Loja.Model;
+using Alura.Loja.Model.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Alura.Loja.Test.Tests {

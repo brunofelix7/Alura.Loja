@@ -1,4 +1,4 @@
-﻿using Alura.Loja.Model;
+﻿using Alura.Loja.Model.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
